@@ -73,7 +73,7 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
     }
 
     emit(state.copyWith(filteredTodos: _filteredTodos));
-    print('[filtered_todos_cubit] setFilteredTodos() | $state');
+    print('[filtered_todos_cubit] setFilteredTodos() 필터링됨');
   }
 
   @override
