@@ -41,7 +41,7 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
       setFilteredTodos();
     });
 
-    print('[디버깅] filtered_todos.생성자 | Subscription 설정됨');
+    print('[filtered_todos] 생성자 | Subscription 설정됨');
   }
 
   void setFilteredTodos() {
@@ -73,7 +73,7 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
     }
 
     emit(state.copyWith(filteredTodos: _filteredTodos));
-    print('[디버깅] filtered_todos_cubit.setFilteredTodos() | state $state');
+    print('[filtered_todos_cubit] setFilteredTodos() | $state');
   }
 
   @override

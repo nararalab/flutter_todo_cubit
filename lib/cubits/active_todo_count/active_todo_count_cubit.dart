@@ -25,7 +25,7 @@ class ActiveTodoCountCubit extends Cubit<ActiveTodoCountState> {
           .length;
 
       emit(state.copyWith(activeTodoCount: currentActiveTodoCount));
-      print('[디버깅] active_todo_count_cubit.생성자 | $currentActiveTodoCount');
+      print('[active_todo_count_cubit] 생성자 | $state');
     });
   }
 
