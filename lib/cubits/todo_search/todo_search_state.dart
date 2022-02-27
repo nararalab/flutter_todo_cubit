@@ -7,7 +7,7 @@ class TodoSearchState extends Equatable {
   });
 
   factory TodoSearchState.initial() {
-    return TodoSearchState(searchTerm: '');
+    return const TodoSearchState(searchTerm: '');
   }
 
   @override

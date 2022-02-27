@@ -2,12 +2,12 @@ part of 'active_todo_count_cubit.dart';
 
 class ActiveTodoCountState extends Equatable {
   final int activeTodoCount;
-  ActiveTodoCountState({
+  const ActiveTodoCountState({
     required this.activeTodoCount,
   });
 
   factory ActiveTodoCountState.initial() {
-    return ActiveTodoCountState(activeTodoCount: 0);
+    return const ActiveTodoCountState(activeTodoCount: 0);
   }
 
   @override
