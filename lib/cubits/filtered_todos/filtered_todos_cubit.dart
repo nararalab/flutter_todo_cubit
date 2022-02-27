@@ -40,6 +40,8 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
         todoListCubit.stream.listen((TodoListState todoListState) {
       setFilteredTodos();
     });
+
+    print('[디버깅] filtered_todos.생성자 | Subscription 설정됨');
   }
 
   void setFilteredTodos() {
@@ -71,6 +73,7 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
     }
 
     emit(state.copyWith(filteredTodos: _filteredTodos));
+    print('[디버깅] filtered_todos_cubit.setFilteredTodos() | state $state');
   }
 
   @override

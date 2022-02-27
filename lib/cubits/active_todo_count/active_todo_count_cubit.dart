@@ -19,14 +19,13 @@ class ActiveTodoCountCubit extends Cubit<ActiveTodoCountState> {
   }) : super(ActiveTodoCountState(activeTodoCount: initialActiveTodoCount)) {
     todoListSubscription =
         todoListCubit.stream.listen((TodoListState todoListState) {
-      print('[디버깅] todoListState: $todoListState');
-
       final int currentActiveTodoCount = todoListState.todos
           .where((Todo todo) => !todo.completed)
           .toList()
           .length;
 
       emit(state.copyWith(activeTodoCount: currentActiveTodoCount));
+      print('[디버깅] active_todo_count_cubit.생성자 | $currentActiveTodoCount');
     });
   }
 

@@ -10,5 +10,6 @@ class TodoFilterCubit extends Cubit<TodoFilterState> {
 
   void changeFilter(Filter newFilter) {
     emit(state.copyWith(filter: newFilter));
+    print('[디버깅] todo_filter_cubit.changeFilter() | state $state');
   }
 }

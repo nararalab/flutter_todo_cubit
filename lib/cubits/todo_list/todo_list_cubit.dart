@@ -13,7 +13,7 @@ class TodoListCubit extends Cubit<TodoListState> {
     final newTodos = [...state.todos, newTodo];
 
     emit(state.copyWith(todos: newTodos));
-    print('[디버깅] $state');
+    print('[디버깅] todo_list_cubit.addTodo() | state $state');
   }
 
   void editTodo(String id, String todoDesc) {
@@ -29,6 +29,7 @@ class TodoListCubit extends Cubit<TodoListState> {
     }).toList();
 
     emit(state.copyWith(todos: newTodos));
+    print('[디버깅] todo_list_cubit.editTodo() | state $state');
   }
 
   void toggleTodo(String id) {
@@ -44,11 +45,13 @@ class TodoListCubit extends Cubit<TodoListState> {
     }).toList();
 
     emit(state.copyWith(todos: newTodos));
+    print('[디버깅] todo_list_cubit.toggleTodo() | state $state');
   }
 
   void removeTodo(Todo todo) {
     final newTodos = state.todos.where((Todo t) => t.id != todo.id).toList();
 
     emit(state.copyWith(todos: newTodos));
+    print('[디버깅] todo_list_cubit.removeTodo() | state $state');
   }
 }

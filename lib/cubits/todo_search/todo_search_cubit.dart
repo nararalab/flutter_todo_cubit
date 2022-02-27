@@ -8,5 +8,6 @@ class TodoSearchCubit extends Cubit<TodoSearchState> {
 
   void setSearchTerm(String newSearchTerm) {
     emit(state.copyWith(searchTerm: newSearchTerm));
+    print('[디버깅] todo_search_cubit.setSearchTerm() | state $state');
   }
 }
